@@ -1,0 +1,51 @@
+/* Reset and base styles */
+body {
+  margin: 0;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #1a1a1a;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Main container */
+.container {
+  text-align: center;
+  max-width: 600px;
+  padding: 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings */
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  color: #bf5700; /* UT Burnt Orange */
+}
+
+h2 {
+  font-weight: 400;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Button */
+.button {
+  display: inline-block;
+  background-color: #bf5700;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background-color: #a14b00;
+}

@@ -1,0 +1,13 @@
+/* Body styles */
+body {
+    display: flex;
+    flex-direction: column; /* stack elements vertically */
+    align-items: center;    /* center horizontally */
+}
+
+/* H1 styles */
+#table-heading {
+    text-align: center;
+    color: navy;
+    margin-bottom: 1rem; /* space below the heading */
+}

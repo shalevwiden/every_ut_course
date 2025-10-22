@@ -5,6 +5,6 @@ Currently unstyled. Without pagination and with styling, the table is extremely 
 
 See it deployed here:
 
-[Every Course at UT](https://everyutcourse.vercel.app)
+[Every Course at UT](https://every-ut-course.vercel.app)
 
 Theres also a .db file and a csv file in this repo.

@@ -1,3 +1,4 @@
+@use "./utils" as *;
 /* Reset and base styles */
 * {
   box-sizing: border-box;
@@ -11,7 +12,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
+  @include bodyStyling;
 }
 
 /* Main container */
@@ -22,36 +25,18 @@ body {
   background: white;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 50px;
 
   /* Headings */
+
   h1 {
     font-size: 2.5rem;
     margin-bottom: 0.5rem;
-    color: #bf5700; /* UT Burnt Orange */
-  }
-
-  h2 {
-    font-weight: 400;
-    color: #555;
-    margin-bottom: 2rem;
+    color: #006cbfff; /* UT Burnt Orange */
   }
 
   /* Button */
-  .button {
-    display: inline-block;
-    background-color: #bf5700;
-    color: white;
-    text-decoration: none;
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    font-size: 1.2rem;
-    font-weight: 600;
-    transition: background 0.3s ease;
 
-    &:hover {
-      background-color: #a14b00;
-    }
-  }
   @media (max-width: 500px) {
     width: 80%;
 
@@ -60,24 +45,54 @@ body {
       margin-bottom: 0.5rem;
       color: #bf5700; /* UT Burnt Orange */
     }
-
+  }
+}
+.schoolcontainer {
+  @include flexcol;
+  @include border(black);
+  width: 90%;
+  height: auto;
+  padding: 100px 0;
+  .schoolbox {
+    @include flexcol;
+    @include border(blue);
+    width: 50%;
     h2 {
       font-weight: 400;
       color: #555;
       margin-bottom: 2rem;
     }
 
-    /* Button */
-    .button {
+    .button#utbutton {
       display: inline-block;
       background-color: #bf5700;
       color: white;
       text-decoration: none;
       padding: 0.8rem 2rem;
       border-radius: 8px;
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       font-weight: 600;
       transition: background 0.3s ease;
+
+      &:hover {
+        background-color: #a14b00;
+      }
+    }
+
+    .button#ricebutton {
+      display: inline-block;
+      background-color: #00205b;
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem 2rem;
+      border-radius: 8px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      transition: background 0.3s ease;
+
+      &:hover {
+        background-color: #002ea1ff;
+      }
     }
   }
 }

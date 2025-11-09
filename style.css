@@ -11,7 +11,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   height: 100vh;
+  scroll-behavior: smooth;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  gap: 10px;
 }
 
 /* Main container */
@@ -22,20 +35,54 @@ body {
   background: white;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  margin: 50px;
   /* Headings */
   /* Button */
 }
 .container h1 {
   font-size: 2.5rem;
   margin-bottom: 0.5rem;
-  color: #bf5700; /* UT Burnt Orange */
+  color: #006cbf; /* UT Burnt Orange */
 }
-.container h2 {
+@media (max-width: 500px) {
+  .container {
+    width: 80%;
+  }
+  .container h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    color: #bf5700; /* UT Burnt Orange */
+  }
+}
+
+.schoolcontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 4px solid black;
+  border-radius: 26px;
+  width: 90%;
+  height: auto;
+  padding: 100px 0;
+}
+.schoolcontainer .schoolbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  border: 4px solid blue;
+  border-radius: 26px;
+  width: 50%;
+}
+.schoolcontainer .schoolbox h2 {
   font-weight: 400;
   color: #555;
   margin-bottom: 2rem;
 }
-.container .button {
+.schoolcontainer .schoolbox .button#utbutton {
   display: inline-block;
   background-color: #bf5700;
   color: white;
@@ -46,33 +93,20 @@ body {
   font-weight: 600;
   transition: background 0.3s ease;
 }
-.container .button:hover {
+.schoolcontainer .schoolbox .button#utbutton:hover {
   background-color: #a14b00;
 }
-@media (max-width: 500px) {
-  .container {
-    width: 80%;
-    /* Button */
-  }
-  .container h1 {
-    font-size: 2rem;
-    margin-bottom: 0.5rem;
-    color: #bf5700; /* UT Burnt Orange */
-  }
-  .container h2 {
-    font-weight: 400;
-    color: #555;
-    margin-bottom: 2rem;
-  }
-  .container .button {
-    display: inline-block;
-    background-color: #bf5700;
-    color: white;
-    text-decoration: none;
-    padding: 0.8rem 2rem;
-    border-radius: 8px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    transition: background 0.3s ease;
-  }
-} /*# sourceMappingURL=style.css.map */
+.schoolcontainer .schoolbox .button#ricebutton {
+  display: inline-block;
+  background-color: #00205b;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+.schoolcontainer .schoolbox .button#ricebutton:hover {
+  background-color: #002ea1;
+}/*# sourceMappingURL=style.css.map */
